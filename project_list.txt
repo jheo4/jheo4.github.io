@@ -1,0 +1,39 @@
+AI Family
+  StarCraft 2 AI
+  MNIST
+  CIFAR 10
+  Tensorflow Examples
+  ML Study Page
+
+Computer Vision
+  Security Cam
+  OpenCV Examples
+  Computer Vision Accleration with FPGA
+
+Systems
+  Hack Basic (assembly)
+  Operating System Developemtn on Rasp 3
+  Automatic Defence System Development with Arduino
+
+Application Development
+  Hankki
+  PyGame Development
+  Window API Game
+  Waiting Pollution
+  Glossy Application
+
+Network_summary & Suggestion
+  Proposal of Network Protocol Stack for Mobility Devices
+
+GSoC 2017 Suggestion
+
+#####################################################################################################
+Publication
+Second Author,FCCM 2018
+Center for Embedded and Cyber-Physical Systems, University of California, Irvine
+First Author, Electronic & Information Research Information Center
+Accelerating Convolutional Neural Network with Field Programmable Gate Arrays, CEIC2017, First Author
+
+Utility Patent
+A Control Program of A Bunker with eCube 4412 and Arduino(in South Korea) PatentNumber SA20160250
+

@@ -25,6 +25,8 @@
         10. Contact Styles
         11. Optional Section Styles
         12. Media Queries
+
+        13. Publication Styles
 */
 
 /*
@@ -957,6 +959,11 @@ footer {
             float: none;
         }
     }
+    .publication-block{
+        h3, span{
+            float: none;
+        }
+    }
 
     .project-image {
         display: none;
@@ -999,3 +1006,58 @@ footer {
     }
 
 }
+
+/*
+    -------------------------------
+    --- 13. Publication Styles ----
+    -------------------------------
+*/
+
+#publication {
+    padding: 50px 15px 20px 15px;
+    border-bottom: 1px solid $border;
+    text-align: center;
+
+    h2 {
+        color: $heading;
+        margin-bottom: 50px;
+    }
+}
+
+.publication-block {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    padding: 15px;
+    border: 1px solid $border;
+    text-align: left;
+
+    h3 {
+        font-weight: 500;
+        float: left;
+        margin: 0;
+        color: $heading;
+    }
+
+    span {
+        color: $text;
+        float: right;
+    }
+
+    h4 {
+        color: $text;
+        clear: both;
+        font-weight: 500;
+        margin: 0 0 15px 0;
+    }
+
+    p, ul {
+        margin: 0;
+        color: $text;
+        font-size: 0.9em;
+    }
+
+    ul {
+        padding: 0 0 0 15px;
+    }
+}
+
