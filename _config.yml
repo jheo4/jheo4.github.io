@@ -1,0 +1,28 @@
+name: "Jin Heo"
+description: "Jin Heo's Blog"
+
+url: ''
+baseurl: ''
+
+markdown: kramdown
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-paginate
+paginate: 10
+paginate_path: /page-:num
+
+disqus-id: 'jheo4'
+
+source:
+destination: ./_site
+
+sass:
+    style: :compressed
+    sass_dir: assets/css/
+
