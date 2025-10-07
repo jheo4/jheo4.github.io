@@ -5,47 +5,48 @@ title: Blog Posts
 ---
 
 <style>
-  /* 1. 이중 컬럼 레이아웃 (Flexbox) */
+  /* 1. Double Column Layout (Flexbox) */
   .container {
-    display: flex; 
-    gap: 30px; /* 컬럼 사이 간격 */
-    flex-wrap: wrap; /* 모바일 대응: 화면이 좁아지면 아래로 떨어짐 */
+    display: flex;
+    gap: 30px; /* Colum margin */
+    flex-wrap: wrap; /* For mobile, when space is insufficient, wrap to next line */
   }
 
   .left-column {
-    flex: 1; /* 남은 공간의 1/3 (상대적 비율) */
-    min-width: 300px; /* 최소 너비 */
+    flex: 1; /* relative ratio of 1/3 of remaining space */
+    min-width: 300px; /* Minimum width for mobile */
   }
 
   .right-column {
-    flex: 2; /* 남은 공간의 2/3 (상대적 비율) */
+    flex: 2; /* relative ratio of 2/3 of remaining space */
     min-width: 300px;
   }
-  
-  /* 2. 카테고리/토글 스타일링 */
+
+  /* 2. Category Styles */
   .category-header {
     cursor: pointer;
-    font-size: 1.2em; 
-    margin-top: 0.5em; 
+    font-size: 1.2em;
+    margin-top: 0.5em;
     margin-bottom: 0.2em;
-    user-select: none; /* 드래그 방지 */
+    user-select: none; /* Prevent text selection on click */
   }
-  
+
   .toggle-icon {
     display: inline-block;
     width: 15px;
     text-align: center;
     font-weight: bold;
+    margin-right: 10px;
   }
-  
+
   .category-posts {
     list-style: none;
     padding-left: 15px;
-    display: none; /* 기본적으로 숨김 */
+    display: none; /* Initially hide the list */
     font-size: 0.9em;
   }
-  
-  /* 3. 오른쪽 컬럼 포스트 리스트 스타일 */
+
+  /* 3. Right Column Styles */
   .right-column ul {
     list-style: none;
     padding-left: 0;
@@ -61,20 +62,20 @@ title: Blog Posts
   <div class="left-column">
     <h2>Categories & Archive</h2>
     <div id="category-archive">
-      
-      {% comment %} Jekyll의 모든 카테고리를 순회 {% endcomment %}
+
+      {% comment %} Jekyll iterates categories as a hash where the key is the category name and the value is an array of posts in that category. {% endcomment %}
       {% for category in site.categories %}
         {% assign category_name = category | first %}
         {% assign posts_in_category = category | last %}
         {% assign post_count = posts_in_category | size %}
-        
+
         <div class="category-block">
-          
+
           <h3 class="category-header" data-target="category-{{ category_name | slugify }}">
             <span class="toggle-icon">[+]</span>
-            {{ category_name }} ({{ post_count }}) 
+            {{ category_name }} ({{ post_count }})
           </h3>
-          
+
           <ul id="category-{{ category_name | slugify }}" class="category-posts">
             {% for post in posts_in_category reversed %}
               <li>
@@ -82,30 +83,27 @@ title: Blog Posts
               </li>
             {% endfor %}
           </ul>
-          
+
         </div>
       {% endfor %}
-      
+
     </div>
-  </div> 
+  </div>
 
   <div class="right-column">
     <h2>Latest Posts</h2>
     <ul>
-      {% for post in site.posts limit: 15 %} 
+      {% comment %} Display the 10 most recent posts {% endcomment %}
+      {% for post in site.posts limit: 10 %}
         <li>
-          <strong>{{ post.date | date: "%Y.%m.%d" }}</strong> 
+          <strong>{{ post.date | date: "%Y.%m.%d" }}</strong>
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </li>
       {% endfor %}
     </ul>
-    
-    {% comment %} 포스트가 15개 이상일 경우 전체 아카이브 페이지 링크 제공 {% endcomment %}
-    {% if site.posts.size > 15 %}
-      <p style="text-align: right;"><a href="{{ site.baseurl }}/archive">View All Posts &rarr;</a></p>
-    {% endif %}
+
   </div>
-  
+
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -118,13 +116,13 @@ title: Blog Posts
         const icon = this.querySelector('.toggle-icon');
 
         if (targetList) {
-          // 리스트의 현재 표시 상태 확인 후 토글
+          // Toggle the display of the category posts list
           if (targetList.style.display === 'none' || targetList.style.display === '') {
             targetList.style.display = 'block';
-            icon.textContent = '[-]'; // 아이콘을 닫힘(-)으로 변경
+            icon.textContent = '[-]'; // change icon to closed (-)
           } else {
             targetList.style.display = 'none';
-            icon.textContent = '[+]'; // 아이콘을 열림(+)으로 변경
+            icon.textContent = '[+]'; // change icon to open (+)
           }
         }
       });
