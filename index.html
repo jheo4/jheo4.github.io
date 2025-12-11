@@ -1,30 +1,102 @@
 ---
 layout: default
 ---
+<style>
+    /* lang-ko 클래스가 있으면서 hidden 클래스도 있는 경우 숨김 */
+    .lang-ko.hidden {
+        display: none;
+    }
+    /* lang-en 클래스가 있으면서 hidden 클래스도 있는 경우 숨김 */
+    .lang-en.hidden {
+        display: none;
+    }
+    /* 언어 선택 버튼 스타일 (선택 사항) */
+    .language-selector {
+        margin-bottom: 20px;
+        text-align: right; /* 버튼을 오른쪽으로 정렬 */
+    }
+    .language-selector button {
+        padding: 8px 12px;
+        margin-left: 10px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+    }
+    /* footer { background-color: #000000; color: #ffffff; padding: 20px; } */
+</style>
 
-<h2>About</h2>
-<p> I'm a PhD candidate at Georgia Tech and working with <a target="_blank" rel="noopener noreferrer" href="https://www.cc.gatech.edu/home/ada/">Ada Gavrilovska</a>.
-I'm also co-advised with <a target="_blank" rel="noopener noreferrer" href="https://www.cc.gatech.edu/~atumanov/index.html">Alexey Tumanov</a>.
+<div class="language-selector">
+    <button onclick="changeLanguage('en')">🇺🇸 Eng</button>
+    <button onclick="changeLanguage('ko')">🇰🇷 Kor</button>
+</div>
 
-<br><br>
-<b>Multimedia & Computer Vision System Architect</b> specialized in improving end-to-end performance and efficiency for real-time and interactive applications, e.g., AR/VR, across edge computing and distributed environments.
-My expertise also includes optimizing workload serving and designing efficient transmission methods for emerging modality data.
-Passionate about developing practical solutions for real-world challenges, I maintain disciplined agility to adopt new technologies.
-<br><br>
+<div class="content lang-en">
+  <h3>About</h3>
+  <p>
+    Jin Heo received his Ph.D. in Computer Science from the Georgia Institute of Technology.
+    During his doctoral studies, he conducted pioneering research in distributed and multimedia systems under the guidance of Prof. <a target="_blank" rel="noopener noreferrer" href="https://www.cc.gatech.edu/home/ada/">Ada Gavrilovska</a>.
+    He is currently a Senior Researcher at Dolby Laboratories, focusing on applying research to industry settings.
+    <br>
+  </p>
 
-My academic trajectory was started after my early career of pro gamer, igniting my initial interest in the intersection of computer science and video game design/development.
-They significantly shape my current research pursuits.
-<br><br>
+  <h3>Research Focus and Objectives</h3>
+  <p>
+    His research lies at the intersection of distributed systems and immersive multimedia systems.
+    With the increasing computational demands of real-time and interactive multimedia use cases, he focuses on developing systems that can efficiently handle these computaionlly intensive workloads.
+    Specifically, he works on designing system architectures and optimization techniques that enhance efficiency, scalability, and user experience for high-load applications such as XR (Extended Reality) and cloud gaming in resource-constrained environments.
+    The ultimate goal of his research is to enable better user experiences and deliver high-quality real-time services to a broader audience through the utilization of edge computing and distributed processing.
+    <br>
+  </p>
+
+  <h3>Background</h3>
+  <p>
+    His academic journey began following an early career as a professional gamer, which sparked his initial interest at the cross-section of computer science and video game design/development.
+    This experience significantly influenced his current research focus on high-performance systems and immersive applications.
+    <br>
+  </p>
+</div>
+
+<div class="content lang-ko hidden">
+  <h3>소개</h3>
+  <p>
+    허진 박사는 조지아텍 (Georgia Institute of Technology) 컴퓨터 과학부에서 박사 학위를 취득했습니다.
+    박사 과정 동안 <a target="_blank" rel="noopener noreferrer" href="https://www.cc.gatech.edu/home/ada/">Ada Gavrilovska</a> 교수의 지도를 받으며 분산 및 멀티미디어 시스템 분야에서 선구적인 연구를 수행했습니다.
+    현재는 Dolby Laboratories 의 Senior Researcher로 재직하며, 연구를 산업 현장에 적용하는 데 주력하고 있습니다.
+    <br>
+  </p>
+
+  <h3>연구 분야 및 목표</h3>
+  <p>
+    그의 연구 분야는 분산 시스템과 몰입형 멀티미디어 시스템의 교차점에 위치해 있습니다.
+    실시간 및 반응형 멀티미디어 유즈케이스의 컴퓨팅 요구사항이 증가함에 따라, 그는 이러한 고부하 워크로드를 효율적으로 처리하는 시스템 개발에 중점을 두고 있습니다.
+    구체적으로 XR (Extended Reality), 클라우드 게이밍과 같은 고부하 애플리케이션을 제한된 컴퓨팅 리소스를 가지는 환경에서 효율성, 확장성, 사용자 경험을 극대화하는 시스템 아키텍처 및 최적화 기술을 개발하고 있습니다.
+    이러한 연구는 엣지 컴퓨팅 및 분산 처리의 활용을 통해 더 많은 사용자들에게 향상된 품질의 실시간 서비스를 제공하는 것을 최종 목표로 합니다.
+    <br>
+  </p>
+
+  <h3>배경</h3>
+  <p>
+    그의 학문적 여정은 프로게이머로서의 초기 경력 이후 시작되었으며, 이는 컴퓨터 과학과 비디오 게임 디자인/개발의 교차점에서 초기 관심을 불러일으켰습니다.
+    그리고 그 경험은 현재 고성능 시스템 및 몰입형 애플리케이션 분야에 대한 깊은 연구 관심사를 형성하는 데 중요한 영향을 미쳤습니다.
+    <br>
+  </p>
+</div>
 
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/jheo4/jheo4.github.io/blob/master/files/resume.pdf">Resume</a> *updated Feb, 2025
-</p>
+<br><br>
 
 <img src="images/me.jpg" height="250" />
 
 
-<h2>Publication & Presentation </h2>
+<div class="content lang-en">
+  <h3>Publication & Presentation </h3>
+</div>
+<div class="content lang-ko hidden">
+  <h3>주요 연구 및 발표</h3>
+</div>
 <ul>
-  <li><em>Adrenaline: Adaptive Rendering Optimization System for Scalable Cloud Gaming</em>, <b>Jin Heo</b>, Ketan Bhardwaj, Ada Gavrilovska, Under review -- [<a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2412.19446">preprint</a>]</li>
+  <li><em>Stimpack: An Adaptive Rendering Optimization System for Scalable Cloud Gaming</em>, <b>Jin Heo</b>, Vic Wang, Ketan Bhardwaj, Ada Gavrilovska, [<a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2412.19446">preprint</a>]</li> -- To appear in The 23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI '26)
   <li><em>Poster: Adapting XR Perception Serving for Edge Server Scalability</em>, <b>Jin Heo</b>, Ada Gavrilovska, IEEE/ACM 9th Symposium on Edge Computing (SEC '24) -- [<a target="_blank" rel="noopener noreferrer" href="https://ieeexplore.ieee.org/abstract/document/10818082">paper</a>]</li>
   <li><em>Gt-Craft: A Framework for Fast Prototyping Geospatial-based Digital Twins in Unity 3D</em>, <b>Jin Heo</b>, Thomas Novlan, Salam Akoum, Ada Gavrilovska, IEEE/ACM 9th Symposium on Edge Computing (SEC '24) -- [<a target="_blank" rel="noopener noreferrer" href="https://ieeexplore.ieee.org/abstract/document/10818167">paper</a>] [<a target="_blank" rel="noopener noreferrer" href="https://github.com/orgs/GT-Craft/repositories">project repo</a>]</li>
   <li><em>FleXR: A System Enabling Flexibly Distributed Extended Reality</em>, <b>Jin Heo</b>, Ketan Bhardwaj, Ada Gavrilovska, The 14th ACM Multimedia Systems Conference (MMSys '23) -- [<a target="_blank" rel="noopener noreferrer" href="https://dl.acm.org/doi/epdf/10.1145/3587819.3590966">paper</a>] [<a target="_blank" rel="noopener noreferrer" href="https://github.com/gt-flexr/FleXR">project repo</a>]</li>
@@ -34,7 +106,12 @@ They significantly shape my current research pursuits.
   <li><em>Acceleration Framework for FPGA Implementation of OpenVX Graph Pipelines</em>, Sajjad Taheri, <b>Jin Heo</b>, Payman Behnam, Jeffrey Chen, Alexander Veidenbaum, Alexandru Nicolau, Field-Programmable Custom Computing Machines (FCCM), 2018 IEEE 26th Annual International Symposium on. IEEE, 2018 [<a target="_blank" rel="noopener noreferrer" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8457676">paper</a>], [<a target="_blank" rel="noopener noreferrer" href="https://cecs.uci.edu/files/2018/03/CECS_TR_18_1.pdf">open version</a>]</li>
 </ul>
 
-<h2> Experience </h2>
+<div class="content lang-en">
+  <h3> Experience </h3>
+</div>
+<div class="content lang-ko hidden">
+  <h3>경력</h3>
+</div>
 <ul>
   <li>Graduate Research Assistant, <b>Georgia Tech</b>, Atlanta, GA, USA, Aug 2019 - Present</li>
   <li>Graduate Research Intern - <b>Dolby Laboratories</b>, San Francisco, CA, USA, May 2024 - Aug 2024</li>
@@ -48,16 +125,47 @@ They significantly shape my current research pursuits.
 </ul>
 
 
-<h2> Education </h2>
-<ul>
-  <li>Georgia Tech, Ph.D., Computer Science, Aug 2019 - Present</li>
-  <li>Ajou University, B.S., Computer Software and Engineering, Mar 2016 - Aug 2018 </li>
-  <li>Academic Credit Bank System, A.S., Information Processing, Mar 2015 - Feb 2016</li>
-  <li>Chungkang College of Cultural Industries, Attened for freshmen, Computer Games and Programming Skills, Mar 2011 - Dec 2014</li>
-</ul>
+<div class="content lang-en">
+  <h3> Education </h3>
+  <ul>
+    <li>Georgia Tech, Ph.D., Computer Science, Aug 2019 - Aug 2025,  PhD Thesis: "<em>Adaptively Serving XR Workloads from Resource-constrained Edge</em>" [<a target="_blank" rel="noopener noreferrer" href="https://repository.gatech.edu/server/api/core/bitstreams/a4adc6fd-a7d4-48a5-bcf1-d7ba526d782d/content">paper</a>]</li>
+    <li>Ajou University, B.S., Computer Software and Engineering, Mar 2016 - Aug 2018 </li>
+    <li>Academic Credit Bank System, A.S., Information Processing, Mar 2015 - Feb 2016</li>
+    <li>Chungkang College of Cultural Industries, Attened for freshmen, Computer Games and Programming Skills, Mar 2011 - Dec 2014</li>
+  </ul>
+</div>
+<div class="content lang-ko hidden">
+  <h3>학력</h3>
+  <ul>
+    <li>조지아 공과대학교 (Georgia Tech), 컴퓨터 과학 박사, 2019년 8월 - 2025년 8월, 학위 논문: "<em>Adaptively Serving XR Workloads from Resource-constrained Edge</em>" [<a target="_blank" rel="noopener noreferrer" href="https://repository.gatech.edu/server/api/core/bitstreams/a4adc6fd-a7d4-48a5-bcf1-d7ba526d782d/content">paper</a>]
+    </li>
+    <li>아주대학교, 컴퓨터 소프트웨어 공학 학사, 2016년 3월 - 2018년 8월</li>
+    <li>학점은행제, 정보처리 전문학사, 2015년 3월 - 2016년 2월</li>
+    <li>청강문화산업대학교, 컴퓨터 게임 및 프로그래밍 기술 (1학년 재학), 2011년 3월 - 2014년 12월</li>
+  </ul>
+</div>
+
 
 
 <!--Click-->
 <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101256565);</script>
 <script async src="//static.getclicky.com/js"></script>
 
+<script>
+    function changeLanguage(lang) {
+        const allContent = document.querySelectorAll('.content'); // getting all content areas
+
+        allContent.forEach(content => {
+            if (content.classList.contains(`lang-${lang}`)) {
+                content.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+            }
+        });
+
+        document.documentElement.lang = lang;
+    }
+    window.onload = function() {
+        changeLanguage('en');
+    };
+</script>
