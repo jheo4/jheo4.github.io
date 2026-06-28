@@ -1,7 +1,8 @@
 name: "Jin Heo"
-description: "Jin Heo's Blog"
+title: "Jin Heo"
+description: "Personal Website of Jin Heo"
 
-url: ''
+url: 'https://jheo4.github.io'
 baseurl: ''
 
 markdown: kramdown
@@ -14,6 +15,8 @@ kramdown:
 
 plugins:
   - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
 paginate: 10
 paginate_path: /page-:num
 
