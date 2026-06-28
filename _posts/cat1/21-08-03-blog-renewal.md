@@ -1,6 +1,7 @@
 ---
 layout: post
 title : "Blog Renewal"
+description : "Blog Renewal"
 date  : 2021-08-03 19:28:05 +0900
 categories: blog
 ---
